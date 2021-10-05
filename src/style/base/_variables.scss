@@ -1,1 +1,10 @@
-$mainColor: red;
+$colorText: white;
+
+%textTitle {
+  font-family: "Montserrat-bold", monospace;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+}

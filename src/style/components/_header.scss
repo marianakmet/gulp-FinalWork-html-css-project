@@ -1,0 +1,132 @@
+body {
+  max-width: 1440px;
+  margin: auto;
+}
+.header {
+  margin: auto;
+  @media (max-width: 960px) and (min-width: 780px) {
+    @include size(90px, 653px);
+  }
+  @media (max-width: 779px) and (min-width: 310px) {
+    @include size(36px, 100%);
+  }
+  &__inner {
+    @include flexbox(space-between, center);
+    @include size(116px, 940px);
+    color: $colorText;
+    margin: auto;
+    z-index: 2;
+
+    @media (max-width: 960px) and (min-width: 780px) {
+      @include size(90px, 653px);
+      padding-top: 25px;
+    }
+
+    @media (max-width: 779px) and (min-width: 310px) {
+      @include size(36px, 100%);
+      padding-top: 20px;
+    }
+  }
+}
+.logo {
+  font-family: "Montserrat-bold", monospace;
+  @include fontSize(20px, 24px);
+  text-transform: uppercase;
+  @media (max-width: 779px) and (min-width: 310px) {
+    position: absolute;
+    top: 153px;
+    left: calc(50% - 76px);
+    margin-left: 0;
+    margin-top: -4px;
+  }
+}
+.menu {
+  @include size(36px, 153px);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", monospace;
+  @include fontSize(14px, 17px);
+  color: $colorText;
+  margin-right: 40px;
+  @media (max-width: 960px) and (min-width: 780px) {
+    margin-right: -10px;
+  }
+  @media (max-width: 779px) and (min-width: 310px) {
+    margin: auto;
+  }
+  &__button {
+    margin-top: 12px;
+
+    &_active {
+      @include size(36px, 90px);
+      border: 2px solid #ffffff;
+      border-radius: 40px;
+      @include flexbox(center, center);
+    }
+  }
+}
+.promo {
+  @include size(700px, 100%);
+  @include flexbox(center, center);
+  flex-direction: column;
+  background-image: url("../images/cover.png");
+  background-size: cover;
+  background-color: rgba(22, 9, 9, 0.767);
+  margin-top: -117px;
+  z-index: -1;
+  @media (max-width: 960px) and (min-width: 780px) {
+    @include size(726px, 100%);
+    background-image: url("../images/cover780.png");
+    padding-top: 23px;
+  }
+  @media (max-width: 779px) and (min-width: 310px) {
+    background-image: url("../images/cover320.png");
+    @include size(594px, 100%);
+    margin-top: -90px;
+  }
+  &__text {
+    @include size(126px, 470px);
+    font-family: "Montserrat-bold", monospace;
+    font-weight: bold;
+    @include fontSize(52px, 63px);
+    text-transform: uppercase;
+    text-align: center;
+    color: $colorText;
+
+    @media (max-width: 779px) and (min-width: 310px) {
+      @include size(78px, 273px);
+      @include fontSize(30px, 37px);
+      margin-top: 150px;
+    }
+  }
+  &__little-text {
+    font-family: "Roboto-thin", monospace;
+    @include fontSize(24px, 24px);
+    color: #f7f3f2;
+    text-align: center;
+    padding-top: 28px;
+
+    @media (max-width: 779px) and (min-width: 310px) {
+      @include fontSize(18px, 24px);
+      @include size(48px, 273px);
+      padding-top: 6px;
+    }
+  }
+  &__button {
+    @include size(40px, 225px);
+    background-color: #ff4e50;
+    border-radius: 40px;
+    font-family: "Montserrat", monospace;
+    font-weight: bold;
+    @include fontSize(14px, 17px);
+    color: $colorText;
+    @include flexbox(center, center);
+    margin-top: 34px;
+    letter-spacing: 0.345px;
+
+    @media (max-width: 779px) and (min-width: 310px) {
+      @include size(40px, 280px);
+      margin-bottom: 26px;
+    }
+  }
+}
